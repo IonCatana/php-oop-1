@@ -31,15 +31,26 @@ class Movie
    * 
    */
 
-   public function __construct(string $name, string $description, int $year, string $genre, string $length)
-   {
-     $this->name = $name;
-     $this->description = $description;
-     $this->year = $year;
-     $this->genre = $genre;
-     $this->length = $length;
-   }
-   
+  public function __construct(string $name, string $description, int $year, string $genre, string $length)
+  {
+    $this->name = $name;
+    $this->description = $description;
+    $this->year = $year;
+    $this->genre = $genre;
+    $this->length = $length;
+  }
+
+  //all'interno della classe è definito almeno un metodo
+
+  /**
+   * Return a movie full info
+   * @return string the movie full informations
+   */
+
+  public function getFullMovies()
+  {
+    return 'Il Film si intitola ' . $this->name . ' il genere e ' . $this->genre . ' e stato prodotto nel ' . $this->year . ' ha una durata di  ' . $this->length . ' e la trama e la sequente: ' . $this->description;
+  }
 }
 
 
