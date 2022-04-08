@@ -47,11 +47,16 @@ class Movie
    * @return string the movie full informations
    */
 
-  public function getFullMovies()
+  public function getFullMovie()
   {
     return 'Il Film si intitola ' . $this->name . ' il genere e ' . $this->genre . ' e stato prodotto nel ' . $this->year . ' ha una durata di  ' . $this->length . ' e la trama e la sequente: ' . $this->description;
   }
 }
 
+
+$firstMovie = new Movie('Il padrino', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, obcaecati.', 1972, 'noir, drammatico, gangster', '175 min');
+
+// var_dump($firstMovie);
+var_dump($firstMovie->getFullMovie());
 
 ?>
