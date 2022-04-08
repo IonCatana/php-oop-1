@@ -64,21 +64,123 @@ class Movie
 }
 
 
-$firstMovie = new Movie('Il padrino', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, obcaecati.', 1972, 'noir, drammatico, gangster', '175 min');
+$firstMovie = new Movie('Il padrino', "Vito Corleone, immigrato siciliano, è padrino della famiglia Corleone. È diventato, dopo anni di crimine, principalmente nell'organizzazione del gioco d'azzardo illegale e nei racket sindacali, il più potente tra i cinque capi-mafia italo-americani della città.", 1972, 'Mafia, Drammatico, Giallo', '175 min');
 
-// var_dump($firstMovie);
-$firstMovie->setMovieLanguage('italiano');
-var_dump($firstMovie);
 
-var_dump($firstMovie->getFullMovie());
+$firstMovie->setMovieLanguage('Italiano');
+//var_dump($firstMovie);
 
-$secondMovie = new Movie('Matrix', 'Pariatur, quod. Officiis libero maxime reprehenderit soluta, sint nam laboriosam ea explicabo quisquam, natus obcaecati sequi reiciendis.', 1999, 'fantascienza, azione', '136 min');
+//var_dump($firstMovie->getFullMovie());
 
-// var_dump($secondMovie);
-$secondMovie->setMovieLanguage('inglese');
-var_dump($secondMovie);
+$secondMovie = new Movie('Matrix', "Thomas Anderson / Neo (Keanu Reeves) è un programmatore della Metacortex, virtuoso cittadino di giorno, mentre di notte è un pericoloso hacker. A causa dei suoi illeciti, è tenuto sotto osservazione dagli agenti Smith (Hugo Weaving), Brown e Jones, che gli inseriscono una cimice nel corpo per controllarlo.", 1999, 'Fantascienza, Azione, Avventura, Cinema Fantastico', '136 min');
 
-var_dump($secondMovie->getFullMovie());
+
+$secondMovie->setMovieLanguage('Inglese');
+//var_dump($secondMovie);
+
+//var_dump($secondMovie->getFullMovie());
 
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>php-oop-1</title>
+  <style>
+    /* common */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .main-contain {
+      width: 1000px;
+      margin: 0 auto;
+    }
+
+    .container {
+      margin: 100px auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .img_movie {
+      width: 300px;
+      height: 500px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .description {
+      width: 300px;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .description h1 span {
+      color: orange;
+    }
+
+    h1 {
+      font-size: 30px;
+      font-weight: 800;
+    }
+
+    span {
+      color: orange;
+    }
+
+    p {
+      color: grey;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-contain">
+    <!-- First Movie -->
+    <div class="container">
+      <div class="img_movie">
+        <img src="./img/padrino.jpg" alt="">
+      </div>
+      <div class="description">
+        <h1><span>Titolo:</span> <?php echo $firstMovie->name; ?></h1>
+        <p><span>Descrizione:</span> <?php echo $firstMovie->description; ?></p>
+        <p><span>Anno:</span> <?php echo $firstMovie->year; ?></p>
+        <p><span>Genere:</span> <?php echo $firstMovie->genre; ?></p>
+        <p><span>Lunghezza:</span> <?php echo $firstMovie->length; ?></p>
+        <p><span>Lingua:</span> <?php echo $firstMovie->language; ?></p>
+      </div>
+    </div>
+    <!-- Second Movie -->
+    <div class="container">
+      <div class="img_movie">
+        <img src="./img/matrix.jpg" alt="">
+      </div>
+      <div class="description">
+        <h1><span>Titolo:</span> <?php echo $secondMovie->name; ?></h1>
+        <p><span>Descrizione:</span> <?php echo $secondMovie->description; ?></p>
+        <p><span>Anno:</span> <?php echo $secondMovie->year; ?></p>
+        <p><span>Genere:</span> <?php echo $secondMovie->genre; ?></p>
+        <p><span>Lunghezza:</span> <?php echo $secondMovie->length; ?></p>
+        <p><span>Lingua:</span> <?php echo $secondMovie->language; ?></p>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
