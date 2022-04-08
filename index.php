@@ -67,6 +67,7 @@ class Movie
 $firstMovie = new Movie('Il padrino', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, obcaecati.', 1972, 'noir, drammatico, gangster', '175 min');
 
 // var_dump($firstMovie);
+$firstMovie->setMovieLanguage('italiano');
 var_dump($firstMovie);
 
 var_dump($firstMovie->getFullMovie());
