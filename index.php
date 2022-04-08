@@ -7,3 +7,17 @@ Ripassate i primi concetti di classe e di variabili e metodi d'istanza che abbia
   => all'interno della classe è definito almeno un metodo
 - vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà
  -->
+
+<?php
+class Movie
+{
+  //all'interno della classe sono dichiarate delle variabili d'istanza
+  public $name;
+  public $description;
+  public $year;
+  public $genre;
+  public $length;
+}
+
+
+?>
