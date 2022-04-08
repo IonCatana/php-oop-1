@@ -17,6 +17,29 @@ class Movie
   public $year;
   public $genre;
   public $length;
+
+
+  //all'interno della classe è definito un costruttore
+
+  /**
+   * Movie constructor
+   * @param string $name
+   * @param string $description
+   * @param int $year
+   * @param string $genre
+   * @param string $length
+   * 
+   */
+
+   public function __construct(string $name, string $description, int $year, string $genre, string $length)
+   {
+     $this->name = $name;
+     $this->description = $description;
+     $this->year = $year;
+     $this->genre = $genre;
+     $this->length = $length;
+   }
+   
 }
 
 
